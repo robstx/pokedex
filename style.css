@@ -1,0 +1,169 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: url('normal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.pokedex-title {
+  margin-top: 20px;
+}
+
+.search-container {
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.pokedex-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pokemon-list {
+  display: flex; /* Adicionando display flex para alinhar os Pokémon lado a lado */
+  flex-wrap: wrap; /* Para garantir que os Pokémon quebrem a linha se necessário */
+  justify-content: space-between; /* Distribui os Pokémon uniformemente ao longo do container */
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px; /* Adicionando espaçamento entre os Pokémon */
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.pokemon-card p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.pokemon-card.grass {
+  background-color: #48d0b0;
+  color: #fff;
+}
+
+/* Adicione estilos para outros tipos de Pokémon aqui */
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .pokemon-card {
+    width: 120px;
+  }
+
+  .pokemon-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pokemon-details {
+    font-size: 14px;
+  }
+
+  .pokemon-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .pokemon-image {
+    height: 150px;
+  }
+
+  .pokemon-name {
+    font-size: 20px;
+  }
+
+  .pokemon-number {
+    font-size: 16px;
+  }
+
+  .pokemon-height,
+  .pokemon-weight,
+  .pokemon-types {
+    font-size: 14px;
+  }
+
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  .pokemon-card {
+    width: 100px;
+  }
+
+  .pokemon-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pokemon-details {
+    font-size: 12px;
+  }
+
+  .pokemon-image {
+    height: 120px;
+  }
+
+  .pokemon-name {
+    font-size: 18px;
+  }
+
+  .pokemon-number {
+    font-size: 14px;
+  }
+
+  .pokemon-height,
+  .pokemon-weight,
+  .pokemon-types {
+    font-size: 12px;
+  }
+
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Estilos responsivos para telas com largura de até 768px */
+@media screen and (max-width: 768px) {
+  .pokemon-card {
+    width: calc(25% - 20px); /* Quatro Pokémon por linha */
+  }
+}
